@@ -4,6 +4,7 @@ function findMatching(drivers, str){
   return result
 }
 function fuzzyMatch(drivers, str){
-  let result = drivers.filter(driver => driver.includes(str) )
+  
+  let result = drivers.filter(driver => driver.slice(0, str.length) === str )
   return result
 }
